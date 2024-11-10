@@ -83,9 +83,10 @@ as below:
 
 ```
 CFLAGS=-I/opt/X11/include -I/opt/X11/include/cairo \
--I/usr/local/opt/tcl-tk/include -O2
-LDFLAGS=-L/opt/X11/lib -L/usr/local/opt/tcl-tk/lib -lm -lcairo \
--lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm -ltcl8.6 -ltk8.6
+  -I/usr/local/opt/tcl-tk/include -I/opt/homebrew/include -O2
+LDFLAGS=-L/opt/X11/lib -L/usr/local/opt/tcl-tk/lib -L/opt/homebrew/lib \
+  -lm -lcairo -lX11 -lXrender -lxcb -lxcb-render -lX11-xcb -lXpm \
+  -ltcl8.6 -ltk8.6 -ljpeg
 ```
 
 Finally, we compile and install the application.  
